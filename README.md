@@ -35,9 +35,7 @@ A student is eligible when:
 The browser version uses JavaScript so it can run for free on GitHub Pages.
 The separate C++ program can be used as the DSA/backend demonstration for the college project.
 
-## Run locally
+## Running locally
 Open `index.html` in a browser.
 
-## GitHub Pages
-Upload these files to a GitHub repository and enable:
-Settings → Pages → Deploy from branch → main → /root
+
