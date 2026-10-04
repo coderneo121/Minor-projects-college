@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Scholarship Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-icon">S</div>
+    <div>
+      <h1>Scholarship Management</h1>
+      <p>Student Scholarship Management System</p>
+    </div>
+  </div>
+  <span class="status">DSA Minor Project</span>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <div>
+      <span class="tag">STUDENT PORTAL</span>
+      <h2>Scholarship Eligibility System</h2>
+      <p>Manage student records, check scholarship eligibility, search students and analyze results using DSA concepts.</p>
+    </div>
+    <div class="rule-box">
+      <strong>Eligibility Criteria</strong>
+      <span>Marks ≥ 75</span>
+      <span>Family Income ≤ ₹3,00,000</span>
+      <small>Both conditions must be satisfied.</small>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stat-card">
+      <span>Total Students</span>
+      <strong id="totalStudents">0</strong>
+    </div>
+    <div class="stat-card">
+      <span>Eligible Students</span>
+      <strong id="eligibleStudents">0</strong>
+    </div>
+    <div class="stat-card">
+      <span>Highest Marks</span>
+      <strong id="topMarks">—</strong>
+    </div>
+    <div class="stat-card">
+      <span>Average Marks</span>
+      <strong id="averageMarks">—</strong>
+    </div>
+  </section>
+
+  <section class="grid">
+
+    <div class="panel">
+      <div class="panel-title">
+        <div>
+          <h3>Add Student</h3>
+          <p>Insert a new student record.</p>
+        </div>
+        <span class="number">01</span>
+      </div>
+
+      <form id="studentForm">
+        <label>Roll Number
+          <input type="number" id="roll" placeholder="e.g. 101" required>
+        </label>
+
+        <label>Student Name
+          <input type="text" id="name" placeholder="Enter name" required>
+        </label>
+
+        <label>Marks
+          <input type="number" id="marks" min="0" max="100" placeholder="0 - 100" required>
+        </label>
+
+        <label>Family Annual Income (₹)
+          <input type="number" id="income" min="0" placeholder="e.g. 250000" required>
+        </label>
+
+        <button type="submit" class="primary">Add Student</button>
+      </form>
+      <div id="message" class="message"></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">
+        <div>
+          <h3>Search Student</h3>
+          <p>Demonstrates Linear and Binary Search.</p>
+        </div>
+        <span class="number">02</span>
+      </div>
+
+      <label>Roll Number
+        <input type="number" id="searchRoll" placeholder="Enter roll number">
+      </label>
+
+      <div class="button-row">
+        <button class="secondary" onclick="linearSearch()">Linear Search</button>
+        <button class="secondary" onclick="binarySearch()">Binary Search</button>
+      </div>
+
+      <div id="searchResult" class="result-box">
+        Search result will appear here.
+      </div>
+
+      <div class="algorithm-note">
+        <strong>DSA used:</strong> Linear Search checks records one-by-one.
+        Binary Search works on a sorted array.
+      </div>
+    </div>
+
+  </section>
+
+  <section class="panel">
+    <div class="panel-title">
+      <div>
+        <h3>Student Records</h3>
+        <p>Linked-list style records displayed in a table.</p>
+      </div>
+      <div class="button-row">
+        <button class="secondary" onclick="sortByMarks()">Sort by Marks</button>
+        <button class="secondary" onclick="loadDemoData()">Load Demo Data</button>
+        <button class="danger-outline" onclick="clearAll()">Clear All</button>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Roll No.</th>
+            <th>Name</th>
+            <th>Marks</th>
+            <th>Family Income</th>
+            <th>Eligibility</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="studentTable"></tbody>
+      </table>
+    </div>
+
+    <div id="emptyState" class="empty">No student records available. Add a student or load demo data.</div>
+  </section>
+
+  <section class="grid">
+    <div class="panel">
+      <div class="panel-title">
+        <div>
+          <h3>Eligible Students</h3>
+          <p>Students satisfying both scholarship conditions.</p>
+        </div>
+        <span class="number">03</span>
+      </div>
+      <div id="eligibleList" class="student-list"></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">
+        <div>
+          <h3>Top Scoring Student</h3>
+          <p>Student with the highest marks.</p>
+        </div>
+        <span class="number">04</span>
+      </div>
+      <div id="topStudent" class="top-student">No data available.</div>
+    </div>
+  </section>
+
+  <section class="concepts">
+    <h3>DSA Concepts Demonstrated</h3>
+    <div class="concept-list">
+      <span>Structure</span>
+      <span>Singly Linked List</span>
+      <span>Array</span>
+      <span>Insertion</span>
+      <span>Deletion</span>
+      <span>Traversal</span>
+      <span>Linear Search</span>
+      <span>Binary Search</span>
+      <span>Bubble Sort</span>
+      <span>Counting</span>
+      <span>Functions</span>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p><strong>Student Scholarship Management System</strong> · DSA Minor Project</p>
+  <p>Nitin Sharma · Piyush · Shivam Chambail</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
