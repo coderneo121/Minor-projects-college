@@ -1,41 +1,51 @@
-# Student Scholarship Management System
+# ScholarTrack — Full-Stack DSA Minor Project
 
-DSA Minor Project
+## Stack
+Frontend: HTML + CSS + JavaScript
+Backend: Node.js + Express
+Database: PostgreSQL
+Hosting target: Render
 
-## Team
-- Nitin Sharma
-- Piyush
-- Shivam Chambail
+## Scholarship rule
+Eligible when BOTH are true:
+- Marks >= 75
+- Annual family income <= Rs. 3,00,000
 
-## Scholarship Eligibility
-A student is eligible when:
-1. Marks are 75 or above.
-2. Family annual income is Rs. 3,00,000 or below.
-3. Both conditions must be satisfied.
+## DSA concepts shown
+Structure, linked list, array, insertion, deletion, traversal, linear search, binary search, bubble sort, counting and functions.
 
-## DSA Concepts
-- Structure
-- Singly Linked List
-- Array
-- Insertion
-- Deletion
-- Traversal
-- Linear Search
-- Binary Search
-- Bubble Sort
-- Counting
-- Functions
+## Local setup
+1. Install Node.js.
+2. Create a PostgreSQL database.
+3. Set `DATABASE_URL`.
+4. Run:
+   npm install
+   npm start
+5. Open http://localhost:10000
 
-## Files
-- index.html — website structure
-- style.css — blue/minimal website design
-- script.js — frontend logic
+For local Windows PowerShell:
+$env:DATABASE_URL="postgresql://username:password@localhost:5432/scholarship"
 
-## Important
-The browser version uses JavaScript so it can run for free on GitHub Pages.
-The separate C++ program can be used as the DSA/backend demonstration for the college project.
+## Render deployment
+Option A — Dashboard:
+1. Push this project to GitHub.
+2. In Render choose New → Web Service.
+3. Connect the GitHub repository.
+4. Build Command: `npm install`
+5. Start Command: `npm start`
+6. Choose Free.
+7. Create a PostgreSQL database and copy its internal connection string into the web service's `DATABASE_URL` environment variable.
 
-## Running locally
-Open `index.html` in a browser.
+Option B — Blueprint:
+Upload `render.yaml` to the repository and use Render's Blueprint deployment.
 
+Important: Render Free web services spin down after 15 minutes of inactivity. Render's current free Postgres databases have a 1 GB limit and expire after 30 days, so this is best for a college demo rather than permanent production storage.
 
+## Why this looks like a genuine student project
+- Clear academic project title and team section
+- Real database-backed CRUD
+- API endpoints
+- Search algorithms are explicitly implemented
+- Bubble Sort is implemented instead of hiding the algorithm behind a library
+- Eligibility rule is visible and consistent
+- No fake payment/login/AI features
